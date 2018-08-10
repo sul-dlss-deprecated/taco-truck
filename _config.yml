@@ -14,13 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: TACO Truck
-email: cmharlow@stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Placeholder GitHub repo for issues, specs and documents for SDR3 planning & work. Waffle board: https://waffle.io/sul-dlss/sdr3-planning
+  Documentation on COCINA, a Digital Repository Architectural approach. TACO Truck is a holder term for Stanford Libraries' prototype of COCINA.
 baseurl: "/taco-truck" # the subpath of your site, e.g. /blog
 url: "https://sul-dlss.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: cm_harlow
-github_username:  cmh2166
 
 # Build settings
 markdown: kramdown
