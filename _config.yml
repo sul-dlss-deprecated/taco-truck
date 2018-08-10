@@ -24,9 +24,13 @@ github_username:  cmh2166
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+
+logo: taco-logo.gif
+show_downloads: true
+# google_analytics: [Your Google Analytics tracking ID]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
