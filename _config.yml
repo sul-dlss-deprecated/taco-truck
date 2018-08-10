@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: TACO Truck
 description: >- # this means to ignore newlines until "baseurl:"
-  Documentation on COCINA, a Digital Repository Architectural approach. TACO Truck is a holder term for Stanford Libraries' prototype of COCINA.
+  Documentation on COCINA, a digital repository architecture, & TACO Truck, Stanford Libraries' prototype of COCINA.
 baseurl: "/taco-truck" # the subpath of your site, e.g. /blog
 url: "https://sul-dlss.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
