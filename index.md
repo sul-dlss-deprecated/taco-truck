@@ -6,11 +6,11 @@ layout: default
 
 TACO Truck is a only slightly frivolous holder term for Stanford Libraries' new digital repository architecture & implementation based on COCINA.
 
-We are separating our implementation and architectural refinement (TACO Truck) from the conceptual architecture (COCINA) in order to enable future overlap with community partners and existing projects that need a modular and scalable digital repository approach.
+We separated our implementation and architectural refinement (TACO Truck) from the conceptual architecture (COCINA) in order to enable easier overlap with community partners and projects that need a modular and scalable digital repository approach.
 
 ### [COCINA](COCINA.md)
 
-COCINA is the conceptual architecture emerging from TACO Truck. The architecture is heavily influenced by Stanford Libraries' needs to move our digital repository forward in a piecemeal and scalable fashion.
+COCINA is the conceptual architecture emerging from TACO Truck. The architecture is heavily guided by Stanford Libraries' needs to move our digital repository forward in a piecemeal and modular fashion.
 
 COCINA has the primary goals of being:
 
@@ -39,7 +39,7 @@ Read more about [TACO Truck here](TACO-Truck.md).
 
 ## Community Feedback on COCINA & TACO Truck
 
-We are in the process of having a series of interviews with community partners to get feedback. This is meant to help us check presumptions and direction outside of our Stanford echo chamber. As feedback is gathered, we will keep an aggregated and anonymized form here.
+We are in the process of having a series of interviews with community partners to get feedback. This is only meant to help us check presumptions and direction outside of our Stanford echo chamber. As feedback is gathered, we will keep an aggregated and anonymized form here.
 
 ## Influences & Related Projects
 

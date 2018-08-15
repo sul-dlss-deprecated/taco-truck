@@ -25,7 +25,7 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
-logo: taco-logo.gif
+logo: assets/img/taco-logo.gif
 show_downloads: true
 # google_analytics: [Your Google Analytics tracking ID]
 
