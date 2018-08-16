@@ -11,7 +11,7 @@ One of the biggest disconnects we had when working on earlier iterations of a po
 * This was paired with a [SDR2 Current State exercise](#sdr-current-state), to understand how our current infrastructure & codebases map to our high level designs.
 * We also performed a [DLSS-wide retrospective on SDR2](#sdr2-department-wide-retrospective), to understand what pain points & technology needs we should prioritize. This gave us updated and better TACO Truck & COCINA Goals.
 * Based on the above, [we then assessed existing technologies - Hyrax, Fedora 4, Fedora API, Valkyrie - for our needs](#community-overlaps).
-* We [prototyped the core components of COCINA, namely TACO (our repository back-end service)](TACO-Prototype.md).
+* We [prototyped the core components of COCINA, namely TACO (our repository back-end service)](TACO-Prototype.html).
 * And we created a high level [TACO Truck roadmap and migration plan](#taco-truck-roadmap--migration-plans).
 
 All of these above points are represented below, with more information on that work.
@@ -215,17 +215,17 @@ Our managers added the following feedback and goals:
 
 ### TACO Truck Prototypes
 
-After performing the above work, we arrived at the first passes of designs for what become [COCINA](COCINA.md).
+After performing the above work, we arrived at the first passes of designs for what become [COCINA](COCINA.html).
 
-We also had a time-boxed work cycle to start prototyping the heart of COCINA: TACO, a service to replace Fedora 3 and the lower level parts of DOR-Services[-App]. This is described more on the [TACO Prototype page](TACO-Prototype.md).
+We also had a time-boxed work cycle to start prototyping the heart of COCINA: TACO, a service to replace Fedora 3 and the lower level parts of DOR-Services[-App]. This is described more on the [TACO Prototype page](TACO-Prototype.html).
 
 ### Community Overlaps
 
 In working through the above and related work on projects like Fedora 4 and Hyku, it became evident we wanted to look first at trying to reuse community components and work in moving TACO Truck forward. After gathering requirements & shared understanding of what we have currently, we reviewed the following work for inclusion in TACO Truck:
 
-* Fedora 4 (the implementation) & the Fedora API: We found neither of these to be a great fit for our microservices-heavy, distributed and quickly scaling repository system. Read more on [our Fedora assessment and review for TACO Truck here](Fedora-Assessment.md).
-* Hyrax (with or without Valkyrie): We evaluated Hyrax for our primary self-deposit and administration web applications, and found it lacking at the time being. We hope to return to Hyrax in the next year or so, after getting more development work done on our Fedora and related replacements, to then re-evaluate what it would take for us to adapt Hyrax to be our self-deposit and administration web applications. [Read more about our Hyrax evaluation here](Hyrax-Assessment.md).
-* PCDM: We plan to use PCDM in our core repository modeling structure, which you can see the [very preliminary starts of here](http://github.com/sul-dlss-labs/sdr3-models/). You'll note that we've moved to a JSON / JSON-LD based model, and internally within TACO, we're heavily using JSON Schema to specify the model. JSON-LD is purely to support RDF modeling, not Linked Data publication internally. Read more about this on our [TACO Prototype page](TACO-Prototype.md).
+* Fedora 4 (the implementation) & the Fedora API: We found neither of these to be a great fit for our microservices-heavy, distributed and quickly scaling repository system. Read more on [our Fedora assessment and review for TACO Truck here](Fedora-Assessment.html).
+* Hyrax (with or without Valkyrie): We evaluated Hyrax for our primary self-deposit and administration web applications, and found it lacking at the time being. We hope to return to Hyrax in the next year or so, after getting more development work done on our Fedora and related replacements, to then re-evaluate what it would take for us to adapt Hyrax to be our self-deposit and administration web applications. [Read more about our Hyrax evaluation here](Hyrax-Assessment.html).
+* PCDM: We plan to use PCDM in our core repository modeling structure, which you can see the [very preliminary starts of here](http://github.com/sul-dlss-labs/sdr3-models/). You'll note that we've moved to a JSON / JSON-LD based model, and internally within TACO, we're heavily using JSON Schema to specify the model. JSON-LD is purely to support RDF modeling, not Linked Data publication internally. Read more about this on our [TACO Prototype page](TACO-Prototype.html).
 * IIIF: Our usage of IIIF approaches and specifications have no plans to change. They remain vital on the Access side of our repository system. There was some discussion early on about using IIIF manifests internally as a core metadata model, but those have been decided against, given no need for IIIF specifications inside our management sphere.
 * MOAB & OCFL (Oxford Common Filesystem Layout): As OCFL continues to develop, we see alignments we could make to MOAB, our existing file layout system for our Preservation resources. OCFL is something we are actively involved in currently and could possibly implement as a translation between our digital repository system resources (the metadata and assets in TACO) and our Preservation system.
 
