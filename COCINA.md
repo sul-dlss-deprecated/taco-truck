@@ -43,7 +43,11 @@ Here is an overview of our data model, heavily influenced by PCDM, WebACL, and W
 
 ![](https://docs.google.com/drawings/d/e/2PACX-1vRMIMJZZYT0U_ntGms36kA020v7r5H3bGfMUUbQY24H7k3jkFOLzi1QnJAmCKiO97b67jN40hubD7CI/pub?w=960&h=720)
 
-And in this repository, you can see some of the prototype specifications for TACO data models: https://github.com/sul-dlss-labs/sdr3-models. Here is our prototype (so not complete!) JSON Schema specification for a Digital Repository Object (or DRO):
+And in this repository, you can see some of the prototype specifications for TACO data models: https://github.com/sul-dlss-labs/sdr3-models.
+
+An important split to recognize here is that we have a JSON MAP (or metadata application profile) for each resource type - Collection, Object, Fileset, File, Agent, etc. This allows us to keep TACO extremely simple and flexible, since it doesn't need to know about "full resources", but only takes one of those at a time for management. SOPA is where our "full" or recursive logic lives. The idea behind this is not just flexibility when interacting with persistence, but also easily scoping of what metadata goes where (i.e. no embedded file metadata on the object level) as well as support for piecemeal updates up and downstream.
+
+Here is our prototype (so not complete!) JSON Schema specification for a Digital Repository Object (or DRO):
 
 ```
 {
@@ -318,5 +322,3 @@ And in this repository, you can see some of the prototype specifications for TAC
   }
 }
 ```
-
-An important split to recognize here is that we have a JSON MAP (or metadata application profile) for each resource type - Collection, Object, Fileset, File, Agent, etc. This allows us to keep TACO extremely simple and flexible, since it doesn't need to know about "full resources", but only takes one of those at a time for management. SOPA is where our "full" or recursive logic lives. The idea behind this is not just flexibility when interacting with persistence, but also easily scoping of what metadata goes where (i.e. no embedded file metadata on the object level) as well as support for piecemeal updates up and downstream.
