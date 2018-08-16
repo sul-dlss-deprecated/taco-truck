@@ -81,13 +81,9 @@ We started an [Identifier Service](https://github.com/sul-dlss-labs/identifier-s
 
 ## Diagrams & Other information
 
-Some early TACO sequence diagrams:
+An early TACO sequence diagrams:
 
 ![](assets/img/TACOsequence1.svg)
-
-![](assets/img/TACOsequence3.svg)
-
-![](assets/img/TACOsequenceCreate.svg)
 
 
 ## To be added here:
