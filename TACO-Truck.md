@@ -281,7 +281,7 @@ One of the patterns we are trying to put into place with this work is that in be
 * Hydrus ⇔ TACO cycle & eventual data migration (step through steps for ETDs but for Hydrus)
 * Design the end user experience of Hydrox (for depositors; excludes search).
 * Argo ⇔ TACO for Editing, Management, & Analytics, & related data migrations
-* Curated Deposit (‘Batch’) ⇔ TACO (including Pre-assembly, accessioning, related tools rewrites) & related data migrations
+* Mediated Deposit (‘Batch’) ⇔ TACO (including Pre-assembly, accessioning, related tools rewrites) & related data migrations
 * Change Access Publication Sources to work with new data model (rotate out PURL Public XML)
 
 
