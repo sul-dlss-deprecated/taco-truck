@@ -213,6 +213,10 @@ Our managers added the following feedback and goals:
 * Aim for well-conceived interfaces, boundaries, & broadly understood design, instead of being driven by single technology or software (e.g. APIs™);
 * Introduce user* value as we go along, re-engineering components driven explicitly by user requirements.
 
+One of the biggest take-away quotes from this retrospective, that effected us in re-approaching microservices but doing it better this time, was the following:
+
+> “There are a lot of interaction points between layers of the technology stack and you often need to know a lot about all of these interactions even if you are only currently concerned with one part of the stack.”
+
 ### TACO Truck Prototypes
 
 After performing the above work, we arrived at the first passes of designs for what become [COCINA](COCINA.html).
