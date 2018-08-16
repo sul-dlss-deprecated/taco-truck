@@ -49,8 +49,69 @@ Additionally, this work generated a [Glossary](Glossary.html) of the terms we us
 
 ### SDR Current State
 
-WIP.
+Current State was a small working group to explore, explain, document, and improve shared understanding of the current state of the SDR2. The goal was to start with all the places where a resource (metadata and possibly some sort of digital asset) would enter SDR then follow it through all the machines, codebases, scripts, databases, etc. until it ended up in Preservation and in our discovery layers. This was taking what we learned above and then see how it is currently implemented, and was sorely needed work given the complexity and size of our digital repository system implementation.
 
+Before jumping into what we found there, it is worth calling out what SDR currently involves. Here are some facts:
+
+* We have around 1,618,552 resources (collections, items ["work" not file level abstraction], and related administrative objects) currently in our repository.
+* We keep all SDR resource metadata in Fedora 3. Digital assets are kept in an NFS mount called "workspace" until they are confirmed to be in Preservation and in Access, then they are cleared out from the repository. This is purely a cost-saving function, as Preservation holds ~455 TB of digital assets currently, Access holds ~426 TB of digital assets, and we have hundreds of TBs of digital assets on our ingest backlog.
+* Not all resources are preserved, and not all resources are publicly discoverable / accessible. We currently have ~248,232 items that are 'dark' - i.e. preserved but not served up for public access. Many derivative files for access usage only are not preserved.
+* There are at least 5 primary ingest points used by a wide variety of users (see more about each below).
+* SDR spans many different content types:
+    * images (archival assets)
+    * PDFs (ETDs, Google Books, self-deposit uploads, ...)
+    * datasets
+    * maps & atlases
+    * web archiving materials
+    * streaming media
+    * etc.
+
+Whereas some places may have multiple systems to deal with each bucket of content or users separately, SDR is the single, core system of a lot of divergent needs, materials, workflows, and user groups. This makes understanding our current system en toto vital but at times difficult. To break this up for the Current State review group, we started by breaking apart the key codebases involved and grouping them roughly according to function:
+
+![Current State Overview Diagram](https://docs.google.com/drawings/d/e/2PACX-1vS0eWlm7_ETunGzpkX0-_2VnZL1N7NpqfmFivPaUbWWfwfi5TXZeKDEMGxIEDT-XCTq9ylutKlb34Ks/pub?w=960&h=720)
+
+**Ingest**
+The most important ingest components are:
+* [Hydrus](https://github.com/sul-dlss/hydrus) is our primary self-deposit app, used for institutional repository, cultural heritage, free online resource cataloging, and other ingest. It is 6 years old, and started with hydra-head 4.0.0, so is an early Hydra application.
+* [ETDs](https://github.com/sul-dlss/hydra_etd) (fyi, private repository) is, loosely, a self-deposit application primarily for managing approval and submission of ETDs to the registrar and SDR concurrently. It is nearly 10 years old, and is considered a "proto-hydra" application in that the structure of this codebase influenced early Hydra work.
+* [Pre-Assembly](https://github.com/sul-dlss/pre-assembly) is a set of Ruby scripts used heavily by the DLSS Accessioning team to do bulk ingest and curated deposit. It is 6 years old and interacts heavily with our "workflows and robots framework", a combination of a resource state machine and declarative-workflow-driven asynchronous processing framework. The majority of our materials - from our various digitization labs or other sources - enters SDR through Pre-Assembly.
+* [WAS-Registrar](https://github.com/sul-dlss/was-registrar) is a Rails application for ingesting archived websites. It is relatively new, being 4 years old, and is one step in mostly manual process for loading web archiving assets into SDR.
+* [Argo](https://github.com/sul-dlss/argo) is a special mention here, as it is primarily an administration dashboard for resources in SDR. Through some additional codebases, it allows bulk editing of metadata through CSV upload, along with review of the status of resources going through SDR - including a huge index behind a Blacklight interface for administrative search and discovery, and a redis-driven dashboard showing the status of resources going through our state machine and asynchronous processing. It is a bit over 7 years old and sits at the heart of a lot of the administrative users needs for this system.
+
+Many of these ingest points connect to Fedora 3 through ActiveFedora, Dor-Services(-App) and connect to Dor-Workflow-Service for processing (discussed below).
+
+There were a number of pseudo-data-flow type diagrams made to understand what these codebases were doing when someone kicked off an ingest, and this work provided the starting interfaces and data shapes for the next review group. Here are two examples:
+
+*Hydrus Current State "Dataflows"*
+![Hydrus diagram](https://docs.google.com/drawings/d/e/2PACX-1vSLJXuphIH4_La3eYiiPY3zIuc46cJVPBQ2w_OKA2mmq0vqR0CIt6kZmGpQQhl_SCSL13kdNHobmuZI/pub?w=2527&h=1690)
+
+*Pre-assembly Current State "Dataflows"*
+![Pre-assembly diagram](https://docs.google.com/drawings/d/e/2PACX-1vR8X5NbWjdxiw7K5OKEGlj0t4TrK5_IxcU-2LzDMf3Ph5wpS2FFQf68rBf5xqHezLqPxjuo4JcQNoR3/pub?w=2091&h=1459)
+
+*WAS Registrar (web archiving) "Dataflow"*
+![Web Archiving System diagram](https://docs.google.com/drawings/d/e/2PACX-1vQMPWuqrO5sIFNnMov6fLcgVEXx8-TzR9KuYCVv3GRjwkRwyFfyP1NF5Dpm5bIYSIwl9fYTs9WT31pl/pub?w=960&h=720)
+
+**DOR Services**
+
+
+
+
+**Robots & Workflows**
+
+
+**Argo+**
+
+
+**PURL+**
+
+
+**Preservation**
+
+
+**Stacks / Shelves**
+
+
+**Indexing, Access & Discovery**
 
 ### SDR2 Department-wide Retrospective
 
