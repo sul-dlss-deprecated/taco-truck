@@ -9,11 +9,10 @@ TACO Truck is an umbrella term for Stanford Libraries' prototype and implementat
 One of the biggest disconnects we had when working on earlier iterations of a possible new architecture (such as Hyrax, Hyku, or Fedora 4 early work) was an understanding what our current system does and what new systems would replace or extend. This disconnect was largely due to the complexity of our current system, how it grew over a decade with many different people involved, and knowledge/experience silos within our teams (i.e. Hydra-mainly developers and SDR2-mainly developers). To address this, the following areas of work were involved:
 * We performed a [SDR domain](#taco-truck-domain) & [baseline functional requirements analysis](#baseline-functional-requirements) with a cross-teams design group.
 * This was paired with a [SDR2 Current State exercise](#sdr-current-state), to understand how our current infrastructure & codebases map to our high level designs.
-* We also performed a [DLSS-wide retrospective on SDR2](#sdr2-department-wide-retrospective), to understand what pain points & technology needs we should prioritize.
-* Based on the above, we then assessed existing technologies - Hyrax, Fedora 4, Fedora API, Valkyrie - for our needs.
-* We set out goals for what became COCINA, or our architectural approach for the given domain and requirements.
-* We prototyped the core components of COCINA, namely TACO (our repository back-end service).
-* And we created a TACO Truck roadmap and migration plan.
+* We also performed a [DLSS-wide retrospective on SDR2](#sdr2-department-wide-retrospective), to understand what pain points & technology needs we should prioritize. This gave us updated and better TACO Truck & COCINA Goals.
+* Based on the above, [we then assessed existing technologies - Hyrax, Fedora 4, Fedora API, Valkyrie - for our needs](#community-overlaps).
+* We [prototyped the core components of COCINA, namely TACO (our repository back-end service)](TACO-Prototype.md).
+* And we created a high level [TACO Truck roadmap and migration plan](#taco-truck-roadmap--migration-plans).
 
 All of these above points are represented below, with more information on that work.
 
@@ -71,6 +70,7 @@ Whereas some places may have multiple systems to deal with each bucket of conten
 ![Current State Overview Diagram](https://docs.google.com/drawings/d/e/2PACX-1vS0eWlm7_ETunGzpkX0-_2VnZL1N7NpqfmFivPaUbWWfwfi5TXZeKDEMGxIEDT-XCTq9ylutKlb34Ks/pub?w=960&h=720)
 
 **Ingest**
+
 This is how content gets into  most important ingest components are:
 * [Hydrus](https://github.com/sul-dlss/hydrus) is our primary self-deposit app, used for institutional repository, cultural heritage, free online resource cataloging, and other ingest. It is 6 years old, and started with hydra-head 4.0.0, so is an early Hydra application.
 * [ETDs](https://github.com/sul-dlss/hydra_etd) (fyi, private repository) is, loosely, a self-deposit application primarily for managing approval and submission of ETDs to the registrar and SDR concurrently. It is nearly 10 years old, and is considered a "proto-hydra" application in that the structure of this codebase influenced early Hydra work.
