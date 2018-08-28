@@ -14,11 +14,11 @@ COCINA is the conceptual architecture emerging from TACO Truck. The architecture
 
 COCINA has the primary goals of being:
 
-* API- & Data-centric enabling flexibility & extensibility of components
-* Profile- & Specification-driven technology
-* Make the data model complex, not the code components
-* Smaller, less complex & less coupled components
-* Easier for users from devs to sysadmins to admins to grok
+* API- & Data-centric enabling flexibility & extensibility of components;
+* Profile- & Specification-driven technology;
+* Make the data model complex, not the code components;
+* Smaller, less complex & less coupled components;
+* Easier for users from devs to sysadmins to admins to grok.
 
 Read more about [COCINA here](COCINA.md).
 
@@ -27,12 +27,12 @@ Read more about [COCINA here](COCINA.md).
 
 Stanford Libraries' prototype and implementation of COCINA is called TACO Truck.
 
-Our goals for TACO Truck are:
+Our primary goals for TACO Truck are:
 
-* Improved performance throughout the system
-* Higher availability of components & resources
-* Ease of Setup, Maintenance, Adjustments, & Monitoring
-* Cloud-first but Cloud-neutral
+* Improved performance throughout the system;
+* Higher availability of components & resources;
+* Ease of setup, maintenance, adjustments, & monitoring;
+* Cloud-first but Cloud-neutral;
 * And all the goals listed above for COCINA.
 
 Read more about [TACO Truck here](TACO-Truck.md).
@@ -43,7 +43,7 @@ We are in the process of having a series of interviews with community partners t
 
 ## Influences & Related Projects
 
-* DataOps Links
-* Airflow
-* Invenio v.3
-* FOLIO
+* [DataOps Resources](https://github.com/sul-dlss-labs/dataOps/wiki#dataops-reading-list--resources-of-interest)
+* [Airflow](https://airflow.apache.org/)
+* [Invenio v.3](https://invenio.readthedocs.io/en/latest/)
+* [FOLIO](https://github.com/folio-org/)

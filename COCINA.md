@@ -6,11 +6,11 @@ layout: default
 
 COCINA is the conceptual architecture emerging from [TACO Truck](TACO-Truck.html). The architecture is heavily influenced by Stanford Libraries' needs to move our digital repository forward in a piecemeal and scalable fashion. COCINA has the primary goals of being:
 
-* API- & Data-centric enabling flexibility & extensibility of components
-* Profile- & Specification-driven technology
-* Make the data model complex, not the code components
-* Smaller, less complex & less coupled components
-* Easier for users from devs to sysadmins to admins to grok
+* API- & Data-centric enabling flexibility & extensibility of components;
+* Profile- & Specification-driven technology;
+* Make the data model complex, not the code components;
+* Smaller, less complex & less coupled components;
+* Easier for users from devs to sysadmins to admins to grok.
 
 Below are the architectural and data model proposals. To see more on implementation, check out our details of the [TACO Prototype work](TACO-Prototype.html), or keep tabs on the [TACO Truck project page.](TACO-Truck.html)
 
@@ -31,7 +31,7 @@ Below are the architectural and data model proposals. To see more on implementat
 * **NACHO (Permissions Service)** - A lightweight authorization service. We expect authentication will occur at the web application level via shib (for people), or through network configurations between services and machines, but we need a central place to understand what user (or workgroup) can perform what actions on what resources or types of resources. This service stores those authorization dictionaries (modeled on WebACl, see our metadata & data models below) and exposes a REST API to verify an action as needed. We imagine this service will primarily be used at the Deposit applications level, possibly at SOPA level, but not below.
 * **Access Publication Service** - a TBD service that consumes FLAN streams for publication of resources, then acts upon them (moves the appropriate TACO resources to the Access filesystem, or kicks off a refritos workflow to do so after transforming the metadata or generating derivatives).
 * **Preservation Handshake Service** - a TBD service that consumes FLAN streams for preservation of resources, then acts upon them (moves the appropriate TACO resources to the Preservation service, or kicks off a refritos workflow to do so after transforming the resource to a MOAB).
-* **Refritos** - this is purely a dependency graph-driven, asynchronous processing tool that is not coupled to the repository (i.e. multiple systems or users can use this). After defining a DAG (directed acyclic graph) or workflow, and ensuring it maps to functions that available robots code can perform once called upon by refritos, a user can then trigger that processing to occur on a resource by putting the resource in the appropriate refritos workspace.
+* **Refritos** - this is a purely dependency graph-driven, asynchronous processing tool that is not coupled to the repository (i.e. multiple systems or users can use this). After defining a DAG (directed acyclic graph) or workflow, and ensuring it maps to functions that available robots code can perform once called upon by refritos, a user can then trigger that processing to occur on a resource by putting the resource in the appropriate refritos workspace.
 
 ## COCINA Data Models & Shapes
 

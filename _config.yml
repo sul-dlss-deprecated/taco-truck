@@ -21,9 +21,11 @@ url: "https://sul-dlss.github.io" # the base hostname & protocol for your site, 
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+remote_theme: cmh2166/minimal-architect
 plugins:
   - jekyll-feed
+  - jekyll-menus
+  - jekyll-remote-theme
 
 logo: assets/img/taco-logo.gif
 show_downloads: true

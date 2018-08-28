@@ -46,4 +46,4 @@ From that requirements mapping, we found the following:
 
 ## Future Steps
 
-We are now in a holding pattern on further Hyrax integration steps until we feel more confident about TACO Truck. We will try to put information here as things come up. 
+We are now in a holding pattern on further Hyrax integration steps until we feel more confident about TACO Truck. We will try to put information here as things come up.
