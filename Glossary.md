@@ -1,5 +1,9 @@
 ---
 layout: default
+menus:
+  header:
+    title: Glossary
+    weight: 1
 ---
 
 # TACO Truck Glossary

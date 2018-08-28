@@ -1,5 +1,9 @@
 ---
 layout: default
+menus:
+  header:
+    title: TACO Prototype
+    weight: 1
 ---
 
 # TACO Prototype (Spring 2018)

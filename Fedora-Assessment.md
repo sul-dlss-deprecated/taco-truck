@@ -1,5 +1,9 @@
 ---
 layout: default
+menus:
+  header:
+    title: Fedora Assessment
+    weight: 2
 ---
 
 # Fedora Assessment for TACO Truck

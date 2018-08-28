@@ -1,5 +1,9 @@
 ---
 layout: default
+menus:
+  header:
+    title: COCINA
+    weight: 1
 ---
 
 # COCINA
