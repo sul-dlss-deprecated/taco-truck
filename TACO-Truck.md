@@ -1,9 +1,5 @@
 ---
 layout: default
-menus:
-  header:
-    title: TACO Truck
-    weight: 1
 ---
 
 # TACO Truck

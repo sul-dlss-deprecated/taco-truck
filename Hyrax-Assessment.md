@@ -1,9 +1,5 @@
 ---
 layout: default
-menus:
-  header:
-    title: Hyrax Assessment
-    weight: 2
 ---
 
 # Hyrax Assessment for TACO Truck Deposit & Administration

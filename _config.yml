@@ -24,21 +24,20 @@ markdown: kramdown
 remote_theme: cmh2166/minimal-architect
 plugins:
   - jekyll-feed
-  - jekyll-menus
   - jekyll-remote-theme
 
 logo: assets/img/taco-logo.gif
 show_downloads: true
-# google_analytics: [Your Google Analytics tracking ID]
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+menu:
+  - menu-label: COCINA
+    menu-url: /taco-truck/COCINA
+  - menu-label: TACO Truck
+    menu-url: /taco-truck/TACO-Truck
+  - menu-label: TACO Prototype
+    menu-url: /taco-truck/TACO-Prototype
+  - menu-label: Fedora Assessment
+    menu-url: /taco-truck/Fedora-Assessment
+  - menu-label: Hyrax Assessment
+    menu-url: /taco-truck/Hyrax-Assessment
+  - menu-label: Glossary
+    menu-url: /taco-truck/Glossary
