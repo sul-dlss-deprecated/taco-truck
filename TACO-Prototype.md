@@ -4,8 +4,6 @@ layout: default
 
 # TACO Prototype (Spring 2018)
 
-*WIP*
-
 In Spring 2018, we held a time-boxed work cycle to create a prototype of TACO plus some related components. This was primarily to test our presumptions so far in designing what became [COCINA](COCINA.html) based on the information gathered in the early phases of [TACO Truck](TACO-Truck.html).
 
 ## Goals
@@ -28,7 +26,7 @@ Here are the codebases & related work done as part of this prototype:
 * Identifier Service (skeleton): https://github.com/sul-dlss-labs/identifier-service
 * Permissions Service (skeleton): https://github.com/sul-dlss-labs/permissions-service
 * Early Refritos Prototype (no longer kept)
-* TACO Data Models & Application Profiles: https://github.com/sul-dlss-labs/sdr3-models
+* COCINA Data Models & Application Profiles: https://sul-dlss.github.io/cocina-models/
 * Dorilocos (benchmarking library): https://github.com/sul-dlss-labs/dorilocos
 * TACO Terraform to AWS work (private repository): https://github.com/sul-dlss/terraform-aws/blob/master/providers/demo/us-east-1/container_definitions/taco.json
 

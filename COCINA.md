@@ -43,7 +43,7 @@ Here is an overview of our data model, heavily influenced by PCDM, WebACL, and W
 
 ![](https://docs.google.com/drawings/d/e/2PACX-1vRMIMJZZYT0U_ntGms36kA020v7r5H3bGfMUUbQY24H7k3jkFOLzi1QnJAmCKiO97b67jN40hubD7CI/pub?w=960&h=720)
 
-And in this repository, you can see some of the prototype specifications for TACO data models: https://github.com/sul-dlss-labs/sdr3-models.
+And in this repository, you can see developing specifications for COCINA data models: http://sul-dlss.github.io/cocina-models/.
 
 An important split to recognize here is that we have a JSON MAP (or metadata application profile) for each resource type - Collection, Object, Fileset, File, Agent, etc. This allows us to keep TACO extremely simple and flexible, since it doesn't need to know about "full resources", but only takes one of those at a time for management. SOPA is where our "full" or recursive logic lives. The idea behind this is not just flexibility when interacting with persistence, but also easily scoping of what metadata goes where (i.e. no embedded file metadata on the object level) as well as support for piecemeal updates up and downstream.
 
@@ -55,7 +55,7 @@ Here is our prototype (so not complete!) JSON Schema specification for a Digital
   "title": "Digital Repository Object",
   "description": "Domain-defined abstraction of a 'work'. Digital Repository Objects' abstraction is describable for our domain’s purposes, i.e. for management needs within our system.",
   "type": "object",
-  "required": ["@context", "@type", "externalIdentifier", "label", "tacoIdentifier", "version", "administrative", "access", "identification", "structural"],
+  "required": ["@context", "@type", "externalIdentifier", "label", "internalIdentifier", "version", "administrative", "access", "identification", "structural"],
   "properties": {
     "@context": {
       "description": "URI for the JSON-LD context definitions.",
@@ -65,21 +65,21 @@ Here is our prototype (so not complete!) JSON Schema specification for a Digital
       "description": "The content type of the DRO. Selected from an established set of values.",
       "type": "string",
       "enum": [
-        "http://sdr.sul.stanford.edu/models/sdr3-object.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-3d.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-agreement.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-book.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-document.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-geo.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-image.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-page.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-photograph.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-manuscript.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-map.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-media.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-track.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-webarchive-binary.jsonld",
-        "http://sdr.sul.stanford.edu/models/sdr3-webarchive-seed.jsonld"
+        "http://cocina.sul.stanford.edu/models/object.jsonld",
+        "http://cocina.sul.stanford.edu/models/3d.jsonld",
+        "http://cocina.sul.stanford.edu/models/agreement.jsonld",
+        "http://cocina.sul.stanford.edu/models/book.jsonld",
+        "http://cocina.sul.stanford.edu/models/document.jsonld",
+        "http://cocina.sul.stanford.edu/models/geo.jsonld",
+        "http://cocina.sul.stanford.edu/models/image.jsonld",
+        "http://cocina.sul.stanford.edu/models/page.jsonld",
+        "http://cocina.sul.stanford.edu/models/photograph.jsonld",
+        "http://cocina.sul.stanford.edu/models/manuscript.jsonld",
+        "http://cocina.sul.stanford.edu/models/map.jsonld",
+        "http://cocina.sul.stanford.edu/models/media.jsonld",
+        "http://cocina.sul.stanford.edu/models/track.jsonld",
+        "http://cocina.sul.stanford.edu/models/webarchive-binary.jsonld",
+        "http://cocina.sul.stanford.edu/models/webarchive-seed.jsonld"
       ]
     },
     "citation": {
@@ -95,15 +95,15 @@ Here is our prototype (so not complete!) JSON Schema specification for a Digital
       "$ref": "Agent.json"
     },
     "externalIdentifier": {
-      "description": "Identifier for the resource within SDR but outside of TACO. DRUID or UUID depending on resource type. Constant across resource versions. What clients will use calling TACO. Same as `identification.identifier`",
+      "description": "Identifier for the resource within the SDR architecture but outside of the repository. DRUID or UUID depending on resource type. Constant across resource versions. What clients will use calling the repository. Same as `identification.identifier`",
       "type": "string"
     },
     "label": {
       "description": "Primary processing label (can be same as title) for a DRO.",
       "type": "string"
     },
-    "tacoIdentifier": {
-      "description": "Identifier for the resource within TACO. UUID, unique for each new version of a TACO resource.",
+    "internalIdentifier": {
+      "description": "Identifier for the resource within the repository. UUID, unique for each new version of a repository resource.",
       "type": "string"
     },
     "version": {
